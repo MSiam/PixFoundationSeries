@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="PixFoundation Series - Benchmarking Multi-Modal Large Language Models for Pixel-level Visual Grounding.">
+        content="PixFoundation Series">
   <meta name="keywords" content="Foundation Models, Segmentation, Visual Grounding">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PixFoundation Series - Benchmarking Multi-Modal Large Language Models for Pixel-level Visual Grounding</title>
+  <title>PixFoundation Series</title>
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -59,7 +59,25 @@
   </div>
 </nav>
 
-<section class="section">
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PixFoundation Series: Benchmarking Multi-Modal Large Language Models for Pixel-level Visual Grounding</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://msiam.github.io/homepage/">Mennatullah Siam</a></span>
+            <span class="author-block">
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">mennatul@ualberta.ca</span>
+          </div>
+	</div>
+     </div>
+    </div>
+  </div>
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -67,12 +85,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Pixel-level vision foundation models ..
+            Pixel-level vision foundation models encompass a family of models with the ability to provide pixel-level output that includes various tasks; segmentation, pixel-level visual grounding and reasoning, depth estimation, motion estimation and tracking. My work specifically concentrates on benchmarking general-purpose multi-modal large language models (MLLMs) and their adaptation to pixel-level understanding, with an emphasis on visual grounding in both images and videos. The motivation behind this effort is to provide benchmarks that question the current emerging MLLMs and video MLLMs, and push them towards the direction which does not degrade their fundamental chat capabilities. Moreover, I evaluate their grounding abilities in challenging vision-centric and motion-centric scenarios. This effort resulted in PixMMVP, PixCV-Bench and MoCentric-Bench benchmarks for pixel-level visual grounding. While the majority of mainstream MLLMs focus on visual grounding with bounding boxes as it is an easier step than the segmentation output. I believe that the holistic view of pixel-level understanding and the interplay of such tasks can help MLLMs acquire better spatial intelligence and moving forward for a better embodied intelliegence. The series includes PixFoundation for benchmarking visual grounding in images using vision-centric challenging scenarios and PixFoudnation 2.0 for benchmarking visual grounding in videos using a motion-centric evaluation.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
 
 <section class="hero" id="PixFoundation">
@@ -80,17 +100,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">PixFoundation: Are We Heading in the Right Direction with Pixel-level Vision Foundation Models?</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://msiam.github.io/homepage/">Mennatullah Siam</a><sup>1</sup>,</span>
-            <span class="author-block">
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>mennatul@ualberta.ca</span>
-          </div>
-
+          <h1 class="title is-3 publication-title">PixFoundation: Are We Heading in the Right Direction with Pixel-level Vision Foundation Models?</h1>
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -140,22 +150,56 @@
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <picture>
+            <img alt="" src="./static/images/PixFoundation.png" />
+        </picture>
+	<h2 class="subtitle has-text-centered">
+        Paired Evaluation for Visual Grounding and Visual Question Answering - <span class="dnerf">PixMMVP & PixCV-Bench</span>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Multiple works have emerged to push the boundaries on multi-modal large language models (MLLMs) towards pixel-level understanding. The current trend in pixel-level MLLMs is to train with pixel-level grounding supervision on large-scale labelled data with specialized decoders for the segmentation task. However, we show that such MLLMs when evaluated on recent challenging vision-centric benchmarks, exhibit a weak ability in visual question answering (VQA). Surprisingly, some of these methods even downgrade the grounding ability of MLLMs that were never trained with such pixel-level supervision. In this work, we propose two novel challenging benchmarks with paired evaluation for both VQA and grounding. We show that MLLMs without pixel-level grounding supervision can outperform the state of the art in such tasks. Our paired benchmarks and evaluation enable additional analysis on the reasons for failure with respect to VQA and/or grounding. Furthermore, we propose simple baselines to extract the grounding information that can be plugged into any MLLM, which we call PixFoundation. More importantly, we study the research question of "When does grounding emerge in MLLMs that are not trained with pixel-level grounding supervision?" We show that grounding can coincide with object parts, its location, appearance, context or state, where we show 27-45% of the examples in both benchmarks exhibit this phenomenon.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <picture>
+            <img alt="" src="./static/images/PixFoundation_results.png" />
+        </picture>
+	<h2 class="subtitle has-text-centered">
+        The Two Benchmarks Results showing our strong baselines and upper bounds (PixFoundation).
+      </h2>
+    </div>
+  </div>
+</section>
+
+
 <section class="hero" id="PixFoundation2.0">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">PixFoundation 2.0: Do Video Multi-Modal LLMs Use Motion in Visual Grounding?</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://msiam.github.io/homepage/">Mennatullah Siam</a><sup>1</sup>,</span>
-            <span class="author-block">
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>mennatul@ualberta.ca</span>
-          </div>
-
+          <h1 class="title is-3 publication-title">PixFoundation 2.0: Do Video Multi-Modal LLMs Use Motion in Visual Grounding?</h1>
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -187,15 +231,26 @@
   </div>
 </section>
 
-
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-        <picture>
-            <img alt="" src="./static/images/PixFoundation.png" />
-        </picture>
-	<h2 class="subtitle has-text-centered">
-        <span class="dnerf">PixMMVP and PixCV-Bench</span> Paired Evaluation Benchmark for Visual Grounding and Visual Question Answering
+  <div class="container is-max-desktop has-text-centered">
+ <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <img src="./static/images/PixFoundation2.png" alt="Description of the image" width="400">
+            </td>
+            <td>
+                <video width="400" controls>
+                    <source src="./static/videos/forward.mp4" type="video/mp4">
+                </video>
+		<video width="400" controls>
+                    <source src="./static/videos/reverse.mp4" type="video/mp4">
+                </video>
+
+            </td>
+        </tr>
+    </table>
+      <h2 class="subtitle has-text-centered">
+        Paired Evaluation for Visual Grounding and Region Captioning in Videos within a Motion-Centric Evaluation <span class="dnerf">MoCentric-Bench</span>
       </h2>
     </div>
   </div>
@@ -209,59 +264,42 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This work is part of a series that tries to push pixel-level visual grounding in images and videos to improve without degrading their fundamental chat capabilities. 
-          </p>
-          <p>
-            The series is focused on paired evaluation where a visual grounding task is paired with a respective task that helps us understand the failures of MLLMs directed towards pixel-level understanding.
+	Multi-modal large language models (MLLMs) have shown impressive generalization across tasks using images and text modalities. While their extension to video has enabled tasks such as video question answering and video captioning, their pixel-level visual grounding abilities are less studied. In this work, we raise the pertinent question of whether motion is used in pixel-level visual grounding and whether video MLLMs can segment objects based on natural language expressions describing their motion patterns. We identify the shortcomings in the current benchmarks, where we show that a single frame can often suffice for capturing the motion referring expression without any temporal reasoning. To address this, we introduce four motion-centric probing techniques, particularly designed for the visual grounding task, to study video MLLMs' ability to identify true motion from a fake one and their ability to grasp the motion order. Consequently, we provide a motion-centric benchmark, MoCentric-Bench. It ensures that video MLLMs are evaluated towards leveraging the interaction between motion and language rather than being dominated by static appearance cues emphasized in existing visual grounding datasets. We further establish strong single-image baselines that are on par with or outperform prior methods. Finally, we explore simple motion-centric adaptation techniques that provide state-of-the-art performance on our MoCentric-Bench. Our motion-centric benchmark, evaluation and findings challenge future models to improve dense spatiotemporal grounding and pixel-level understanding within videos.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-
+  </div>
+</section>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-        <picture>
-            <img alt="" src="./static/images/PixFoundation2.png" />
-        </picture>
-      <div>
         <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/forward.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reverse.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-	<h2 class="subtitle has-text-centered">
-        <span class="dnerf">MoCentric-Bench</span> Paired Evaluation Benchmark for Visual Grounding and Region Cpationing in Videos
-      </h2>
+       	  <picture>
+       	    <img alt="" src="./static/images/PixFoundation2_probes.png" />
+       	  </picture>
+	</div>
+	</div>
+        <h2 class="subtitle has-text-centered">
+        I provide the first attempt to probe MLLMs for visual grounding of motion patterns dsecribed with language and inspecting both motion existence and order.
+        </h2>
+	</div>
+        <div class="item item-steve has-text-centered">
+       	  <picture>
+       	    <img alt="" src="./static/images/PixFoundation2_static.png" style="width: 80%; height; auto"/>
+       	  </picture>
+	</div>
+        <h3 class="subtitle has-text-centered">
+        This Figure shows the shortcomings in the current motion referring expression segmentation datasets, where often one frame is sufficient to capture <br>the expression without motion.
+	Expressions from left to right: (1) "jump to the left then jump back", (2) "dog playing with monkey", <br>(3) "puppy that overwhelms another puppy", 
+	(4) "cow shaking head and looking at us."<br> (5) "The little cat walking from behind to the front".
+        </h3>
     </div>
   </div>
 </section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-		Placeholder.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
+<br>
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -269,31 +307,31 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/forward1.mp4"
+            <source src="./static/videos/single11.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reverse1.mp4"
+            <source src="./static/videos/single2.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/forward2.mp4"
+            <source src="./static/videos/single3.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reverse2.mp4"
+            <source src="./static/videos/reverse1.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-blueshirt">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/forward3.mp4"
+            <source src="./static/videos/reverse2.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -308,6 +346,29 @@
   </div>
 </section>
 
+<div>
+   <h2 class="subtitle has-text-centered">
+    Examples on the above two probes using the multi-video layout with the static keyframe and the reverse of the video. <br> Motion expressions are shown below each video.
+    </h2>
+</div>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="item item-steve">
+       	  <picture>
+       	    <img alt="" src="./static/images/PixFoundation2_results_1.png" />
+       	  </picture>
+       	  <picture>
+       	    <img alt="" src="./static/images/PixFoundation2_results_2.png" />
+       	  </picture>
+	</div>
+       <h2 class="subtitle has-text-centered">
+        The MoCentric-Bench Visual grounding results showing both the strong single-image baselines and the motion-centric adaptation variants. Region captioning results within the paired evaluation to be released soon.
+       </h2>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -320,7 +381,6 @@
 }</code></pre>
   </div>
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
     <pre><code>@article{siam2025pixfoundation,
   title={PixFoundation: Are We Heading in the Right Direction with Pixel-level Vision Foundation Models?},
   author={Siam, Mennatullah},
@@ -333,14 +393,12 @@
 
 
 <footer class="footer">
-  <div class="container">
+  <div>
     <div class="content has-text-centered">
       <a class="icon-link" href="https://github.com/msiam" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column has-text-centered">
         <div class="content">
           <p>
             This website is built upon <a href="https://github.com/nerfies/nerfies.github.io">Nerfies source code</a>.
