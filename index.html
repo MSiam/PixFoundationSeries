@@ -170,8 +170,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Multiple works have emerged to push the boundaries on multi-modal large language models (MLLMs) towards pixel-level understanding. The current trend in pixel-level MLLMs is to train with pixel-level grounding supervision on large-scale labelled data with specialized decoders for the segmentation task. However, we show that such MLLMs when evaluated on recent challenging vision-centric benchmarks, exhibit a weak ability in visual question answering (VQA). Surprisingly, some of these methods even downgrade the grounding ability of MLLMs that were never trained with such pixel-level supervision. In this work, we propose two novel challenging benchmarks with paired evaluation for both VQA and grounding. We show that MLLMs without pixel-level grounding supervision can outperform the state of the art in such tasks. Our paired benchmarks and evaluation enable additional analysis on the reasons for failure with respect to VQA and/or grounding. Furthermore, we propose simple baselines to extract the grounding information that can be plugged into any MLLM, which we call PixFoundation. More importantly, we study the research question of "When does grounding emerge in MLLMs that are not trained with pixel-level grounding supervision?" We show that grounding can coincide with object parts, its location, appearance, context or state, where we show 27-45% of the examples in both benchmarks exhibit this phenomenon.
-          </p>
+        Multiple works have emerged to push the boundaries of multi-modal large language models (MLLMs) towards pixel-level understanding. The current trend is to train MLLMs with pixel-level grounding supervision in terms of masks on large-scale labelled data and specialized decoders for the segmentation task. However, we show that such MLLMs when evaluated on recent challenging vision-centric benchmarks, exhibit a weak ability in visual question answering (VQA). Surprisingly, some of these methods even downgrade the grounding ability of MLLMs that were never trained with such pixel-level supervision. In this work, we propose two novel challenging benchmarks with paired evaluation for both VQA and grounding. We demonstrate that simple baselines that are not unified achieve performance that matches or surpasses some of the pixel-level MLLMs. Our paired benchmarks and evaluation enable additional analysis on the reasons for failure with respect to VQA and/or grounding. Furthermore, we propose a prompt sensitivity analysis on both the language and visual prompts tailored for the grounding task. More importantly, we study the research question of "When does grounding emerge in MLLMs with respect to the output tokens?" We propose an interpretability tool that can be plugged into any MLLM to study the aforementioned question. We show that grounding does not necessarily coincide with the exact referring expression in the output, but can coincide with the object parts, its location, appearance, context or state.  
+	</p>
         </div>
       </div>
     </div>
@@ -200,7 +200,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
         <picture>
-            <img alt="" src="./static/images/PixFoundation_results.png" />
+            <img alt="" src="./static/images/PixFoundationTable.png" />
         </picture>
 	<h2 class="subtitle has-text-centered">
         The Two Benchmarks Results Showing our Strong Baselines and Upper Bounds (PixFoundation).
